@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendário com Anotações</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Calendário com Anotações</h1>
+
+  <div class="calendar-header">
+    <button onclick="changeMonth(-1)">← Anterior</button>
+    <h2 id="monthYear"></h2>
+    <button onclick="changeMonth(1)">Próximo →</button>
+  </div>
+
+  <div id="calendar"></div>
+
+  <div class="modal" id="noteModal">
+    <div class="modal-content">
+      <h3 id="modalDateTitle"></h3>
+      <textarea id="noteInput" placeholder="Digite sua anotação..."></textarea>
+      <br/>
+      <button onclick="saveNote()">Salvar</button>
+      <button onclick="closeModal()">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
